@@ -30,16 +30,16 @@ SpringWeb
 #Modelos-configuração-Banco-de-dados-GitPod
 
 .gitpod.yml
-
+```
 ports:
   - port: 8080
     visibility: public
 image: 
   file: .gitpod.Dockerfile
-
+```
 
 .gitpod.Dockerfile
-
+```
 FROM gitpod/workspace-mysql
 
 USER gitpod
@@ -49,7 +49,11 @@ RUN /bin/bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
         && sdk flush archives \
         && sdk flush temp"
 
-Referencia repositório: https://github.com/mineda/springboot3lab4/blob/main/.gitpod.yml
+```
+
+
+
+**[*Repositório Prof°Mineda*](https://github.com/mineda/springboot3lab4/blob/main/.gitpod.yml)** 
 
 
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/131548759?s=400&u=17f723bde4fddaf993acc1c502435760ce66dbbb&v=4" width=115><br><sub>Roberta Cristina de Abreu</sub>](https://github.com/RobAb2023) 
