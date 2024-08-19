@@ -1,4 +1,4 @@
-package br.gov.sp.fatec.Springboot2024;
+package br.gov.sp.fatec.springboot2024;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
