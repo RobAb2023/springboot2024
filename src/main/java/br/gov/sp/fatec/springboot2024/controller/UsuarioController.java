@@ -14,30 +14,27 @@ import org.springframework.web.bind.annotation.RestController;
 import br.gov.sp.fatec.springboot2024.entity.Usuario;
 import br.gov.sp.fatec.springboot2024.service.UsuarioService;
 
-
-
-
 @RestController
 @RequestMapping(value = "/usuario")
 @CrossOrigin
 public class UsuarioController {
-
+    
     @Autowired
     private UsuarioService service;
-    
+
     @GetMapping
-    public List<Usuario> todosUsuarios(){
-    return service.todosUsuarios();
+    public List<Usuario> todosUsuarios() {
+        return service.todosUsuarios();
+    }
 
-}
+    @PostMapping
+    public Usuario novoUsuario(@RequestBody Usuario usuario) {
+        return service.novoUsuario(usuario);
+    }
 
-@PostMapping
-public Usuario novoUsuario(@RequestBody Usuario usuario){
-    return service.novoUsuario(usuario);
-}
+    @GetMapping(value = "/{id}")
+    public Usuario buscarPeloId(@PathVariable("id") Long id) {
+        return service.buscarPeloId(id);
+    }
 
-@GetMapping(value = "/{id}")
-public Usuario buscarPeloId(@PathVariable ("id") Long id){
-    return service.buscarPeloId(id);
-}
 }

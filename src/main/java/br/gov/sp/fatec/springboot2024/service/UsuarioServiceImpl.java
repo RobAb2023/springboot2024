@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import br.gov.sp.fatec.springboot2024.entity.Usuario;
@@ -22,6 +23,7 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
+    @Transactional
     public Usuario novoUsuario(Usuario usuario) {
         if(usuario == null ||
                 usuario.getNome() == null ||

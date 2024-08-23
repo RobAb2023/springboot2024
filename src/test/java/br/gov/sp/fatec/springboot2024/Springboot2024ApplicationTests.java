@@ -1,4 +1,4 @@
-package br.gov.sp.fatec.Springboot2024;
+package br.gov.sp.fatec.springboot2024;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
