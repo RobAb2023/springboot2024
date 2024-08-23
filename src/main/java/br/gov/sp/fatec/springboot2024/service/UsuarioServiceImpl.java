@@ -1,5 +1,6 @@
 package br.gov.sp.fatec.springboot2024.service;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +11,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import br.gov.sp.fatec.springboot2024.entity.Usuario;
 import br.gov.sp.fatec.springboot2024.repository.UsuarioRepository;
-import jakarta.transaction.Transactional;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService{
@@ -22,7 +22,6 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
-    @Transactional
     public Usuario novoUsuario(Usuario usuario) {
         if(usuario == null ||
                 usuario.getNome() == null ||
